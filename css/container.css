@@ -1,0 +1,26 @@
+.container {
+    margin: 20px 155px;
+}
+
+.container__button {
+    margin: 10px auto;
+    padding: 10px;
+    border: hsla(0, 0%, 100%, 0.53) solid;
+    border-style: inset;
+    border-radius: 10px;
+    font-weight: 700;
+    color: hsl(0deg 0% 100%);
+    background-color: hsla(311, 29%, 61%, 0.161);
+}
+
+.container__button:hover {
+    padding: 9px;
+}
+
+.container__button:active {
+    background-color: hsla(311, 30%, 65%, 0.264);
+}
+
+.container__button--marginRight {
+    margin-right: 10px;
+}

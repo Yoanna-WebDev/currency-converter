@@ -1,0 +1,18 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+    box-sizing: inherit;
+}
+
+.body {
+    margin: auto;
+    max-width: 1000px;
+    text-align: center;
+    font-family: Lato;
+    color: hsl(54deg 100% 93%);
+    background-color: hsl(273deg 72% 17%);
+}
