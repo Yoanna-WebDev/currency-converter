@@ -1,71 +1,105 @@
 <!DOCTYPE html>
 <html lang="pl">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+            integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link href="css/style.css" rel="stylesheet" />
+        <link href="css/form.css" rel="stylesheet" />
+        <link href="css/container.css" rel="stylesheet" />
+        <link href="css/information.css" rel="stylesheet" />
+        <script defer src="js/script.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+        <title>Kalkulator Walut</title>
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/form.css" rel="stylesheet">
-    <link href="css/container.css" rel="stylesheet">
-    <link href="css/information.css" rel="stylesheet">
-    <script defer src="js/script.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-    <title>Kalkulator Walut</title>
-</head>
-
-<body class="body">
-    <form class="form js-form">
-        <fieldset class="form__fieldset">
-            <legend class="form__legend">Przelicznik walut</legend>
-            <p>
-                <label class="form__label">
-                    <span class="form__title">Kwota w PLN *:</span> <input class="form__field js-amount"
-                        type="number" name="amount" min="0.1" step="any" required>
-                </label>
-            </p>
-            <p>
-                <label class="form__label">
-                    <span class="form__title">Przelicz na:</span>
-                    <select class="form__field js-foreignCurrency" name="foreignCurrency">
-                        <option value="CAD" selected>Dolar kanadyjski</option>
-                        <option value="NZD">Dolar nowozelandzki</option>
-                        <option value="CHF">Frank szwajcarski</option>
-                        <option value="ISK">Korona islandzka</option>
-                        <option value="NOK">Korona norweska</option>
-                        <option value="JPY">Jen</option>
-                        <option value="KRW">Won południowokoreański</option>
-                    </select>
-                </label>
-            </p>
-            <p>
-                <label class="form__label">
-                    <span class="form__title">Kwota po przeliczeniu:</span>
-                    <input class="form__field form__field--readOnly js-finalAmount" readonly>
-                </label>
-            </p>
-        </fieldset>
-        <div class="container">
-            <p>
-                <button class="container__button container__button--marginRight">Przelicz</button>
-                <button class="container__button" type="reset">Wyczyść</button>
-            </p>
+    <body class="body">
+        <div class="wrapper">
+            <form class="form js-form">
+                <fieldset class="form__fieldset">
+                    <legend class="form__legend">Przelicznik walut</legend>
+                    <p>
+                        <label class="form__label">
+                            <span class="form__title">Kwota w PLN *:</span>
+                            <input
+                                class="form__field js-amount"
+                                type="number"
+                                name="amount"
+                                min="0.1"
+                                step="any"
+                                required
+                            />
+                        </label>
+                    </p>
+                    <p>
+                        <label class="form__label">
+                            <span class="form__title">Przelicz na:</span>
+                            <select
+                                class="form__field js-foreignCurrency"
+                                name="foreignCurrency"
+                            >
+                                <option value="CAD" selected>
+                                    Dolar kanadyjski
+                                </option>
+                                <option value="NZD">Dolar nowozelandzki</option>
+                                <option value="CHF">Frank szwajcarski</option>
+                                <option value="ISK">Korona islandzka</option>
+                                <option value="NOK">Korona norweska</option>
+                                <option value="JPY">Jen</option>
+                                <option value="KRW">
+                                    Won południowokoreański
+                                </option>
+                            </select>
+                        </label>
+                    </p>
+                    <p>
+                        <label class="form__label">
+                            <span class="form__title"
+                                >Kwota po przeliczeniu:</span
+                            >
+                            <input
+                                class="form__field form__field--readOnly js-finalAmount"
+                                readonly
+                            />
+                        </label>
+                    </p>
+                </fieldset>
+                <div class="container">
+                    <p>
+                        <button
+                            class="container__button container__button--marginRight"
+                        >
+                            Przelicz
+                        </button>
+                        <button class="container__button" type="reset">
+                            Wyczyść
+                        </button>
+                    </p>
+                </div>
+            </form>
+            <div class="information">
+                <p>
+                    <span>Kurs walut z dnia 05-01-2023 według NBP</span>
+                </p>
+                <p>
+                    <span>* Pole obowiązkowe</span>
+                </p>
+            </div>
         </div>
-    </form>
-    <div class="information">
-        <p>
-            <span>Kurs walut z dnia 05-01-2023 według NBP</span>
-        </p>
-        <p>
-            <span>* Pole obowiązkowe</span>
-        </p>
-    </div>
-
-</body>
-
+    </body>
 </html>
