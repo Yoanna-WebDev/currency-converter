@@ -1,5 +1,6 @@
 .information {
     margin: auto;
+    margin-bottom: 100px;
     max-width: 500px;
     padding: 10px 20px;
     border: 1px solid hsla(0, 0%, 100%, 0.24);
