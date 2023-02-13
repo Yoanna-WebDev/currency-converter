@@ -15,4 +15,10 @@ html {
     font-family: Lato;
     color: hsl(54deg 100% 93%);
     background-color: hsl(273deg 72% 17%);
+    background-image: url("../images/bank3.png");
+    overflow: auto;
+    resize: both;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
 }
