@@ -1,45 +1,52 @@
-let formElement = document.querySelector(".js-form");
-let amountElement = document.querySelector(".js-amount");
-let currencyElement = document.querySelector(".js-foreignCurrency");
-let resultElement = document.querySelector(".js-finalAmount");
+{
+    const switchRate = (currency) => {
+        let rateExchange;
 
-formElement.addEventListener("submit", (event) => {
-    event.preventDefault();
+        switch (currency) {
+            case "CAD":
+                return (rateExchange = 0.31);
 
-    let currency = currencyElement.value;
-    let rateExchange;
+            case "NZD":
+                return (rateExchange = 0.36);
 
-    switch (currency) {
-        case "CAD":
-            rateExchange = 0.31;
-            break;
+            case "CHF":
+                return (rateExchange = 0.21);
 
-        case "NZD":
-            rateExchange = 0.36;
-            break;
+            case "ISK":
+                return (rateExchange = 32.48);
 
-        case "CHF":
-            rateExchange = 0.21;
-            break;
+            case "NOK":
+                return (rateExchange = 2.29);
 
-        case "ISK":
-            rateExchange = 32.48;
-            break;
+            case "JPY":
+                return (rateExchange = 30.15);
 
-        case "NOK":
-            rateExchange = 2.29;
-            break;
+            case "KRW":
+                return (rateExchange = 286.53);
+        }
+    };
 
-        case "JPY":
-            rateExchange = 30.15;
-            break;
+    const updateResult = (result, currency) => {
+        const resultElement = document.querySelector(".js-finalAmount");
+        resultElement.value = `${result.toFixed(2)} ${currency}`;
+    };
 
-        case "KRW":
-            rateExchange = 286.53;
-    }
+    const formSubmit = (event) => {
+        event.preventDefault();
 
-    let amount = amountElement.value;
-    let result = amount * rateExchange;
-    resultElement.value = `${result.toFixed(2)} ${currency}`;
+        const currencyElement = document.querySelector(".js-foreignCurrency");
+        const amountElement = document.querySelector(".js-amount");
+        const currency = currencyElement.value;
+        const amount = +amountElement.value;
+        const rate = switchRate(currency);
+        const result = amount * rate;
+        updateResult(result, currency);
+    };
 
-});
+    const init = () => {
+        const formElement = document.querySelector(".js-form");
+        formElement.addEventListener("submit", formSubmit);
+    };
+
+    init();
+}
