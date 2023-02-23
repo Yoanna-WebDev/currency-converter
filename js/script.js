@@ -1,28 +1,26 @@
 {
     const switchRate = (currency) => {
-        let rateExchange;
-
         switch (currency) {
             case "CAD":
-                return (rateExchange = 0.31);
+                return 0.31;
 
             case "NZD":
-                return (rateExchange = 0.36);
+                return 0.36;
 
             case "CHF":
-                return (rateExchange = 0.21);
+                return 0.21;
 
             case "ISK":
-                return (rateExchange = 32.48);
+                return 32.48;
 
             case "NOK":
-                return (rateExchange = 2.29);
+                return 2.29;
 
             case "JPY":
-                return (rateExchange = 30.15);
+                return 30.15;
 
             case "KRW":
-                return (rateExchange = 286.53);
+                return 286.53;
         }
     };
 
