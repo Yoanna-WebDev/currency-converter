@@ -20,3 +20,4 @@ The technologies used in the project:
 - ES6+
 - GIT
 - Markdown
+- Flex
